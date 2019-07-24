@@ -10,15 +10,15 @@ test('Node is a class', () => {
   expect(typeof Node.prototype.constructor).toEqual('function');
 });
 
-describe.skip('A Node', () => {
+// describe.skip('A Node', () => {
   test('has properties "data" and "next"', () => {
     const node = new Node('a', 'b');
     expect(node.data).toEqual('a');
     expect(node.next).toEqual('b');
   });
-});
+// });
 
-describe.skip('Insert First', () => {
+// describe.skip('Insert First', () => {
   test('appends a node to the start of the list', () => {
     const l = new List();
     l.insertFirst(1);
@@ -26,9 +26,13 @@ describe.skip('Insert First', () => {
     l.insertFirst(2);
     expect(l.head.data).toEqual(2);
   });
-});
+// });
+const l = new List();
+l.insertFirst(1);
+l.insertFirst(2);
+console.log(l);
 
-describe.skip('Size', () => {
+// describe.skip('Size', () => {
   test('returns the number of items in the linked list', () => {
     const l = new List();
     expect(l.size()).toEqual(0);
@@ -38,9 +42,9 @@ describe.skip('Size', () => {
     l.insertFirst(1);
     expect(l.size()).toEqual(4);
   });
-});
+// });
 
-describe.skip('GetFirst', () => {
+// describe.skip('GetFirst', () => {
   test('returns the first element', () => {
     const l = new List();
     l.insertFirst(1);
@@ -48,9 +52,9 @@ describe.skip('GetFirst', () => {
     l.insertFirst(2);
     expect(l.getFirst().data).toEqual(2);
   });
-});
+// });
 
-describe.skip('GetLast', () => {
+// describe.skip('GetLast', () => {
   test('returns the last element', () => {
     const l = new List();
     l.insertFirst(2);
@@ -58,9 +62,9 @@ describe.skip('GetLast', () => {
     l.insertFirst(1);
     expect(l.getLast()).toEqual({ data: 2, next: null });
   });
-});
+// });
 
-describe.skip('Clear', () => {
+// describe.skip('Clear', () => {
   test('empties out the list', () => {
     const l = new List();
     expect(l.size()).toEqual(0);
@@ -72,9 +76,9 @@ describe.skip('Clear', () => {
     l.clear();
     expect(l.size()).toEqual(0);
   });
-});
+// });
 
-describe.skip('RemoveFirst', () => {
+// describe.skip('RemoveFirst', () => {
   test('removes the first node when the list has a size of one', () => {
     const l = new List();
     l.insertFirst('a');
@@ -95,9 +99,9 @@ describe.skip('RemoveFirst', () => {
     expect(l.size()).toEqual(1);
     expect(l.getFirst().data).toEqual('c');
   });
-});
+// });
 
-describe.skip('RemoveLast', () => {
+// describe.skip('RemoveLast', () => {
   test('RemoveLast removes the last node when list is empty', () => {
     const l = new List();
     expect(() => {
@@ -133,9 +137,9 @@ describe.skip('RemoveLast', () => {
     expect(l.size()).toEqual(2);
     expect(l.getLast().data).toEqual('b');
   });
-});
+// });
 
-describe.skip('InsertLast', () => {
+// describe.skip('InsertLast', () => {
   test('adds to the end of the list', () => {
     const l = new List();
     l.insertFirst('a');
@@ -145,7 +149,7 @@ describe.skip('InsertLast', () => {
     expect(l.size()).toEqual(2);
     expect(l.getLast().data).toEqual('b');
   });
-});
+// });
 
 describe.skip('GetAt', () => {
   test('returns the node at given index', () => {

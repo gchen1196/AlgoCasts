@@ -17,6 +17,12 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+//input step
+//output string
+//every iteration, create string with # 
+//concat to result string
+function steps(n) {
+  
+}
 
 module.exports = steps;
